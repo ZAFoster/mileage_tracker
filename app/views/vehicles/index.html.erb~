@@ -1,0 +1,28 @@
+<h1>My Vehicles</h1>
+
+<table class="table">
+  <tr>
+    <th>Color</th>
+    <th>Year</th>
+    <th>License plate number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<!-- display the list of vehicles here -->
+  <tr>
+    <td><% # color %></td>
+    <td><% # year %></td>
+    <td><% # license plate number %></td>
+    <td><% # show link  %></td>
+    <td><% # edit link %></td>
+    <td><% # delete link with confirmation %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehicle', new_vehicle_path %>
+
