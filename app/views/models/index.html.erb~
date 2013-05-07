@@ -20,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New Model', new_model_path %>
+<% # create a link the "new" model page %>

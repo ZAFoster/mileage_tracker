@@ -14,8 +14,13 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.xml
   def show
+    store_location
+    @mileage = Mileage.new
     @vehicle = Vehicle.find(params[:id])
-    @mileages = Mileage.where(:vehicle_id => params[:id])
+#    @mileages = Mileage.where(:vehicle_id => params[:id])
+#    @mileages = Mileage.find_by_vehicle_id(params[:id])
+#    @mileages = Mileage.where(:vehicle_id => @vehicle.id)
+#    @mileages = @vehicle.mileages
 
     respond_to do |format|
       format.html # show.html.erb

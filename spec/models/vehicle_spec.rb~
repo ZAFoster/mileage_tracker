@@ -11,10 +11,10 @@ describe Vehicle do
   describe 'make method' do
     let(:ford) { Make.create! :name => 'Ford' }
     let(:model) { Model.create! :make => ford, :name => 'Mustang' }
-    let(:vehicle) { Vehicle.create! :model => model }
+    let(:vehicle) { Vehicle.create! :model => mustang }
 
     it 'should delegate to the associated model' do
-      model.should_receive(:make).and_return('Ford')
+      mustang.should_receive(:make).and_return('Ford')
       vehicle.make.should == 'Ford'
     end
   end

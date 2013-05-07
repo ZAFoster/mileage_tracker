@@ -3,7 +3,7 @@ class Model < ActiveRecord::Base
   has_many :vehicles
   has_many :mileages, :through => :vehicles
 
-  validates :name, presence: true
+  validates :name, presence true
 
   def mymake
     "#{make.name}"
